@@ -8,7 +8,8 @@
   "project_page": "https://github.com/nubisproject/nubis-puppet-grafana",
   "issues_url": "https://github.com/nubisproject/nubis-puppet-grafana/issues",
   "dependencies": [
-    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"},
+    {"name":"bfraser-grafana","version_requirement":"2.5.0"}
   ],
   "data_provider": null
 }
