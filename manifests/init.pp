@@ -104,7 +104,7 @@ exec {'enable proxy support':
   mode    => '0640',
   recurse => true,
   purge   => true,
-  source  => 'puppet:///modules/${module_name}/dashboards',
+  source  => "puppet:///modules/${module_name}/dashboards",
   require => [
     Class['grafana'],
   ]
