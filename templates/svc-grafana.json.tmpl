@@ -1,0 +1,16 @@
+{
+  "service": {
+    "name": "<%= @project %>-grafana",
+    "port": 3000,
+    "tags": [
+        "<%= @project %>",
+        "traefik.tags=<%= @tag_name %>",
+        "traefik.frontend.rule=PathPrefixStrip:/grafana"
+    ],
+    "check": {
+       "http": "http://localhost:3000/login",
+       "interval": "30s",
+       "timeout": "1s"
+    }
+  }
+}
