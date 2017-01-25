@@ -43,10 +43,14 @@
 # Copyright 2017 Your name here, unless otherwise noted.
 #
 class nubis_grafana($version = '3.1.1-1470047149', $tag_name='monitoring', $project=undef) {
-  if (!$project) {
-    $project = $::project_name
+
+  if ($project) {
+    $grafana_project = $project
   }
-  
+  else {
+    $grafana_project = $::project_name
+  }
+
   package {'crudini':
     ensure => present,
   }

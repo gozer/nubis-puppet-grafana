@@ -1,9 +1,8 @@
 {
   "service": {
-    "name": "<%= @project %>-grafana",
+    "name": "<%= @grafana_project %>-grafana",
     "port": 3000,
     "tags": [
-        "<%= @project %>",
         "traefik.tags=<%= @tag_name %>",
         "traefik.frontend.rule=PathPrefixStrip:/grafana"
     ],
