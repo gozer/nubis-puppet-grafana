@@ -42,7 +42,7 @@
 #
 # Copyright 2017 Your name here, unless otherwise noted.
 #
-class nubis_grafana($version = '3.1.1-1470047149', $tag_name='monitoring', $project=undef, $dashboard_dir) {
+class nubis_grafana($version = '3.1.1-1470047149', $tag_name='monitoring', $project=undef, $dashboard_dir=undef) {
 
   if ($project) {
     $grafana_project = $project
