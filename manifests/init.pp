@@ -42,7 +42,7 @@
 #
 # Copyright 2017 Your name here, unless otherwise noted.
 #
-class nubis_grafana($version = '3.1.1-1470047149', $tag_name='monitoring', $project=undef, $dashboard_dir=undef) {
+class nubis_grafana($version = '3.1.1-1470047149', $tag_name='monitoring', $project=undef, $dashboards_dir=undef) {
 
   if ($project) {
     $grafana_project = $project
@@ -101,8 +101,8 @@ exec {'enable proxy support':
   command => '/bin/echo ". /etc/profile.d/proxy.sh" >> /etc/default/grafana-server'
 }
 
-  if ($dashboard_dir) {
-    $dashboard_src = $dashboard_dir
+  if ($dashboards_dir) {
+    $dashboard_src = $dashboards_dir
   }
   else {
     $dashboard_src = "puppet:///modules/${module_name}/dashboards"
