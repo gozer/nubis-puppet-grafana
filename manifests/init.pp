@@ -42,7 +42,7 @@
 #
 # Copyright 2017 Your name here, unless otherwise noted.
 #
-class nubis_grafana($version = '3.1.1-1470047149', $tag_name='monitoring', $project=undef, $dashboards_dir=undef) {
+class nubis_grafana($version = '3.1.1-1470047149', $tag_name='monitoring', $project=undef, $dashboards_dir=undef, $root_url = '/grafana') {
 
   if ($project) {
     $grafana_project = $project
@@ -62,7 +62,7 @@ class nubis_grafana($version = '3.1.1-1470047149', $tag_name='monitoring', $proj
       app_mode          => 'production',
         'server'        => {
           protocol => 'http',
-          root_url => '/grafana',
+          root_url => $grafana,
         },
         'auth.anonymous'  => {
           enabled => true,
